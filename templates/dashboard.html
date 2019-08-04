@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>Resultados </h1>
+  
+
+
+  <table class="table table-bordered table-dark">
+   <thead class="thead-dark">
+   <button type="button" class="list-group-item list-group-item-action active">
+         Resultados do ano de 2016
+         </button>
+    <tr>
+      
+      <th scope="col">Total de volume de Reais (BRL) negociados  </th>
+      <th scope="col">Total de negociações realizadas</th>
+      <th scope="col">Média diária de volume de Reais (BRL)</th>
+      <th scope="col">Média diária de negociações realizadas</th>
+      
+    </tr>
+    
+      <tr>
+     
+        <td scope="row">{{VolTotal}}</td>
+        <td scope="row">{{NegTotal}}</td>
+        <td scope="row">{{MediaVol}}</td>
+        <td scope="row">{{MediaNeg}}</td>
+        
+    
+        
+      </tr>
+
+  </table>
+    
+    <div class="card" style="width: 30rem;">
+      <div class="card-header">
+      
+      </div>
+          <button type="button" class="list-group-item list-group-item-action active">
+         Meses do ano de 2016 ordenados pelo volume de negociações do maior para o menor
+         </button>
+        <ul class="list-group">
+          <li class="list-group-item"> Mes: {{row[0]['id']}} Valor: {{row[0]['volume'] }} </li>
+          <li class="list-group-item"> Mes: {{row[1]['id']}} Valor: {{row[1]['volume'] }} </li>
+          <li class="list-group-item"> Mes:  {{row[2]['id']}} Valor: {{row[2]['volume'] }} </li>
+          <li class="list-group-item"> Mes:  {{row[3]['id']}} Valor: {{row[3]['volume'] }} </li>
+          <li class="list-group-item"> Mes:  {{row[4]['id']}} Valor: {{row[4]['volume'] }} </li>
+          <li class="list-group-item"> Mes:  {{row[5]['id']}} Valor: {{row[5]['volume'] }} </li>
+          <li class="list-group-item"> Mes:  {{row[6]['id']}} Valor: {{row[6]['volume'] }} </li>
+          <li class="list-group-item"> Mes:  {{row[7]['id']}} Valor: {{row[7]['volume'] }} </li>
+          <li class="list-group-item"> Mes:  {{row[8]['id']}} Valor: {{row[8]['volume'] }} </li>
+          <li class="list-group-item"> Mes:  {{row[9]['id']}} Valor: {{row[9]['volume'] }} </li>
+          <li class="list-group-item"> Mes:  {{row[10]['id']}} Valor: {{row[10]['volume'] }} </li>
+          <li class="list-group-item"> Mes:  {{row[11]['id']}} Valor: {{row[11]['volume'] }} </li>
+        </ul>
+    </div>
+    
+{% endblock %}
